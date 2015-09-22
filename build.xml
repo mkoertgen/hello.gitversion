@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="genConfigIS" default="build">
+	<property environment="env"/>
+  <target name="build">
+      <ant antfile="${env.GENCONFIG}build.xml" target="build" dir="${basedir}" />	
+  </target>
+</project>
+
