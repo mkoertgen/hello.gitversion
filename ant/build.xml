@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="genConfigIS" default="build">
+	<property environment="env"/>
+  <target name="build">
+    <echo message="How to use GitVersion with ant &amp; Jenkins:"/>
+
+    <echo message="0. Build in Jenkins, i.e. JENKINS_URL != null/empty"/>
+    <echo message="1. exec 'GitVersion.exe /output buildserver' to create 'gitversion.properties'"/>
+		<exec executable="cmd" failonerror="true">
+      <!-- TODO: we fake to be in Jenkins here -->
+      <env key="JENKINS_URL" value="foobar"/>
+			<arg value="/c" />
+			<arg value="GitVersion.exe" />
+			<arg value="/output" />
+			<arg value="buildserver" />
+		</exec>
+  	
+    <echo message="2. load & use 'gitversion.properties'"/>
+    <property file="gitversion.properties" />
+    <echoproperties prefix="GitVersion_"/>    
+  </target>
+</project>
+
