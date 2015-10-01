@@ -10,8 +10,15 @@ Clone this repo
 
 Then start playing around with [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/), e.g. using [Atlassian SourceTree](https://www.atlassian.com/software/sourcetree/overview).
 
-For instance, Create a `feature`, do a `release` or a `hotfix` and check
+For instance, 
+
+- switch branches, 
+- create a `feature`, 
+- do a `release` or a `hotfix`
+
+Then check how versioning is affected, using
 
     gitversion
 
-how versioning is affected. 
+For [GitHubFlow](https://guides.github.com/introduction/flow/) try the same using feature branches and pull requests
+
