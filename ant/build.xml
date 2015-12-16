@@ -15,7 +15,7 @@
 			<arg value="buildserver" />
 		</exec>
   	
-    <echo message="2. load & use 'gitversion.properties'"/>
+    <echo message="2. load &amp; use 'gitversion.properties'"/>
     <property file="gitversion.properties" />
     <echoproperties prefix="GitVersion_"/>    
   </target>
