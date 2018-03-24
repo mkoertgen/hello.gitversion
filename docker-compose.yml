@@ -1,0 +1,15 @@
+version: '3'
+services:
+  gitversion:
+    image: gittools/gitversion:latest
+    volumes:
+      - .:/repo
+    command: /showvariable SemVer
+
+  maven:
+    image: ${REGISTRY:-localhost:5000}/${REPOSITORY:-myrepo}/mymavenapp:${GITVERSION_SEMVER:-0.1.0-unknown}
+    build:
+      context: ./maven
+      args:
+        GITVERSION_SEMVER: ${GITVERSION_SEMVER:-0.1.0-unknown}
+     

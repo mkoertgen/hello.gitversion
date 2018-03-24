@@ -3,8 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.gitversion.examples</groupId>
   <artifactId>hello.gitversion</artifactId>
-  <!-- Specified with -D on command line -->
-  <version>${gitversion.semver}</version>
+  <version>0.0.1-unknown</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
