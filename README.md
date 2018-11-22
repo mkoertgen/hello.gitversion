@@ -32,3 +32,8 @@ For [GitHubFlow](https://guides.github.com/introduction/flow/) try the same usin
 export GITVERSION_SEMVER=$(docker-compose run gitversion | tr -dc '[[:print:]]')
 docker-compose build maven
 ```
+
+### Maven
+Maven uses the special *${revision}* variable to set the version, see https://maven.apache.org/maven-ci-friendly.html .
+
+The [flatten-maven-plugin](https://www.mojohaus.org/flatten-maven-plugin/) is needed, if you want to install/deploy the build artifact.
