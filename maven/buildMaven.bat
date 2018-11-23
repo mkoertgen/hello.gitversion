@@ -1,3 +1,3 @@
 @echo off
-mvn mvn versions:set -DnewVersion=%GitVersion_SemVer% && mvn versions:commit && mvn package
+mvn -Drevision=%GitVersion_SemVer% clean package
 endlocal
